@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -47,18 +48,18 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-white border-gray-200 shadow">
+    <nav className="bg-gray-900 border-gray-700 shadow">
       <div className="flex flex-wrap items-center justify-between mx-auto px-4 md:px-12 h-12">
         <a href="/" className="flex items-center">
-          <span className="text-xl md:text-2xl font-medium whitespace-nowrap">
-            <span className="text-red-500 font-bold">C</span>rop
-            <span className="text-red-500 font-bold">C</span>onnect
+          <span className="text-xl md:text-2xl font-medium whitespace-nowrap text-white">
+            <span className="text-red-500 font-bold">A</span>rgo
+            <span className="text-red-500 font-bold">N</span>et
           </span>
         </a>
         <div className="flex flex-row gap-4 md:gap-8 text-2xl md:text-3xl">
           <div
             ref={userDropdownRef}
-            className="relative flex flex-row gap-1 justify-center items-center text-blue-700 cursor-pointer"
+            className="relative flex flex-row gap-1 justify-center items-center text-blue-400 cursor-pointer"
             onMouseEnter={() => {
               setShowUserDropdown(true);
               setShowSellerDropdown(false);
@@ -70,23 +71,23 @@ function Navbar() {
             }}
           >
             <FaUserCircle />
-            <span className="text-sm font-medium hidden md:block">User</span>
+            <span className="text-sm font-medium hidden md:block text-white">User</span>
             {cookies.user_access_token && (
               <div
                 className={`absolute ${
                   showUserDropdown ? "block" : "hidden"
-                } top-8 right-0 z-10 font-medium bg-white rounded-lg shadow-md pl-1 md:pl-4 pr-2 md:pr-8 py-0 md:py-2`}
+                } top-8 right-0 z-10 font-medium bg-gray-800 rounded-lg shadow-md pl-1 md:pl-4 pr-2 md:pr-8 py-0 md:py-2`}
               >
-                <ul className="py-1 md:py-2 flex flex-col text-sm gap-2 text-gray-700 ">
+                <ul className="py-1 md:py-2 flex flex-col text-sm gap-2 text-gray-300">
                   <li
                     onClick={() => {
                       console.log("User log out clicked");
-                      setCookie("user_access_token", "", {expires: new Date(0) });
+                      setCookie("user_access_token", "", { expires: new Date(0) });
                       notify("User Logged Out", "info");
                       navigate("/");
                     }}
                   >
-                    <a className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  whitespace-nowrap">
+                    <a className="block py-2 px-3 text-gray-300 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-blue-400 md:p-0 whitespace-nowrap">
                       User Logout
                     </a>
                   </li>
@@ -96,7 +97,7 @@ function Navbar() {
           </div>
           <div
             ref={sellerDropdownRef}
-            className="relative flex flex-row gap-1 justify-center items-center text-green-700 cursor-pointer"
+            className="relative flex flex-row gap-1 justify-center items-center text-green-400 cursor-pointer"
             onMouseEnter={() => {
               setShowSellerDropdown(true);
               setShowUserDropdown(false);
@@ -108,34 +109,34 @@ function Navbar() {
             }}
           >
             <SiSellfy />
-            <span className="text-sm font-medium hidden md:block">Seller</span>
+            <span className="text-sm font-medium hidden md:block text-white">Seller</span>
             {cookies.seller_access_token && (
               <div
                 className={`absolute ${
                   showSellerDropdown ? "block" : "hidden"
-                } top-8 right-0 z-10 font-medium bg-white rounded-lg shadow-md pl-1 md:pl-4 pr-2 md:pr-8 py-0 md:py-2`}
+                } top-8 right-0 z-10 font-medium bg-gray-800 rounded-lg shadow-md pl-1 md:pl-4 pr-2 md:pr-8 py-0 md:py-2`}
               >
-                <ul className="py-2 flex flex-col text-sm gap-2 text-gray-700 ">
+                <ul className="py-2 flex flex-col text-sm gap-2 text-gray-300">
                   <li
                     onClick={() => {
                       navigate("/sellerdashboard");
                     }}
                   >
-                    <a className="block px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0  whitespace-nowrap">
+                    <a className="block px-3 text-gray-300 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-green-400 md:p-0 whitespace-nowrap">
                       Seller Dashboard
                     </a>
                   </li>
                   <li
                     onClick={() => {
                       console.log("Seller log out clicked");
-                      setCookie("seller_access_token", "", {expires: new Date(0) });
-                      setCookie("brandName", "", {expires: new Date(0) });
+                      setCookie("seller_access_token", "", { expires: new Date(0) });
+                      setCookie("brandName", "", { expires: new Date(0) });
 
                       navigate("/");
                       notify("Seller Logged Out", "info");
                     }}
                   >
-                    <a className="block px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0  whitespace-nowrap">
+                    <a className="block px-3 text-gray-300 rounded hover:bg-gray-600 md:hover:bg-transparent md:border-0 md:hover:text-green-400 md:p-0 whitespace-nowrap">
                       Seller Logout
                     </a>
                   </li>
@@ -144,13 +145,13 @@ function Navbar() {
             )}
           </div>
           <div
-            className="flex flex-row gap-1 justify-center items-center text-red-700 cursor-pointer"
+            className="flex flex-row gap-1 justify-center items-center text-red-400 cursor-pointer"
             onClick={() => {
               setOpenCart(true);
             }}
           >
             <AiOutlineShoppingCart />
-            <span className="text-sm font-medium hidden md:block">Cart</span>
+            <span className="text-sm font-medium hidden md:block text-white">Cart</span>
           </div>
           {openCart && <Cart setOpenCart={setOpenCart} />}
         </div>

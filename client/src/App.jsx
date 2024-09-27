@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import './App.css'
 import React, { useEffect, useMemo } from "react";
 import LoginAndSignup from "./pages/account";

@@ -8,20 +8,19 @@
     height: 8px; /* Height of horizontal scrollbar */
 }
 
-
 /* Track */
 ::-webkit-scrollbar-track {
-    background: white;
+    background: #1f1f1f; /* Dark background for the track */
     border-radius: 5px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #7f1d1d;
+    background: #9ca3af; /* Light color for the scrollbar handle */
     border-radius: 5px;
 }
  
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #4c1111;
+    background: #d1d5db; /* Lighter color on hover */
 }

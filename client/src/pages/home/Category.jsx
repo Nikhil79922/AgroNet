@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import CategoryCard from "../../components/home/CategoryCard";
 import { Link } from "react-router-dom";
@@ -47,10 +48,14 @@ const categoryProductData = [
 
 function Category() {
   return (
-    <div className="grid gap-2 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid gap-2 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-gray-900 p-4 text-gray-100">
       {categoryProductData.map((item, index) => (
         <Link to={`/category/${item.title.toLowerCase()}`} key={index}>
-          <CategoryCard title={item.title} image={item.image} compressedImg={item.compressedImg}/>
+          <CategoryCard
+            title={item.title}
+            image={item.image}
+            compressedImg={item.compressedImg}
+          />
         </Link>
       ))}
     </div>
