@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import CartCard from "../../components/cart/CartCard";
 import { useSelector } from "react-redux";

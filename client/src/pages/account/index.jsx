@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import InputTag from "../../components/input/InputTag";
@@ -33,7 +35,7 @@ function LoginAndSignup() {
     if (isSignInForm) {
       setFormData((prevData) => ({
         ...prevData,
-        email: "jaloh53056@jahsec.com",
+        email: "nikhil53056@gmail.com",
         password: "12345678",
       }));
     } else {
@@ -61,7 +63,7 @@ function LoginAndSignup() {
                 {/* Common for both seller and user */}
                 <InputTag
                   label={"Name"}
-                  placeholder={"John"}
+                  placeholder={"Nikhil"}
                   type={"text"}
                   outlineColor={
                     type === "seller" ? "outline-green-700" : "outline-blue-600"
@@ -72,7 +74,7 @@ function LoginAndSignup() {
                 />
                 <InputTag
                   label={"Contact No."}
-                  placeholder={"9876543210"}
+                  placeholder={"79922XXXXX"}
                   type={"text"}
                   outlineColor={
                     type === "seller" ? "outline-green-700" : "outline-blue-600"
@@ -86,7 +88,7 @@ function LoginAndSignup() {
                 {type === "seller" && (
                   <InputTag
                     label={"Brand Name"}
-                    placeholder={"JohnVeggies"}
+                    placeholder={"NikhilVeggies"}
                     type={"text"}
                     outlineColor={
                       type === "seller"
@@ -104,7 +106,7 @@ function LoginAndSignup() {
             {/* For Sign In */}
             <InputTag
               label={"Email"}
-              placeholder={"john@doe.com"}
+              placeholder={"Nikhil@gmail.com"}
               type={"email"}
               outlineColor={
                 type === "seller" ? "outline-green-700" : "outline-blue-600"
@@ -141,7 +143,7 @@ function LoginAndSignup() {
               <div className="text-xs font-medium text-rose-600">
                 *In case you don't want to create an account, you can use the
                 following credentials to login: <br />
-                Email: jaloh53056@jahsec.com <br />
+                Email: nikhil53056@gmail.com <br />
                 Password: 12345678
               </div>
             ) : (
@@ -163,3 +165,4 @@ function LoginAndSignup() {
 }
 
 export default LoginAndSignup;
+
