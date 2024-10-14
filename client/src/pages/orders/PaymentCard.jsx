@@ -40,8 +40,8 @@ const PaymentCard = ({
   };
 
   return (
-    <div className="flex flex-col justify-center px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50  space-y-6">
-      <h3 className="text-xl  font-semibold leading-5 text-gray-800">
+    <div className="flex flex-col justify-center px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-900  space-y-6">
+      <h3 className="text-xl  font-semibold leading-5 text-white">
         Shipping
       </h3>
       <div className="flex justify-between items-start w-full">
@@ -55,14 +55,14 @@ const PaymentCard = ({
             />
           </div>
           <div className="flex flex-col justify-start items-center">
-            <p className="text-lg leading-6  font-semibold text-gray-800">
-              CropConnect
+            <p className="text-lg leading-6  font-semibold text-white">
+              AgroNet
               <br />
-              <span className="font-normal">Delivery within 24 Hours</span>
+              <span className="font-normal text-white">Delivery within 24 Hours</span>
             </p>
           </div>
         </div>
-        <p className="text-lg font-semibold leading-6  text-gray-800">
+        <p className="text-lg font-semibold leading-6  text-white">
           Rs.
           {totalAmount +
             (totalAmount >= limitForFreeDelivery ? 0 : deliveryCharge)}

@@ -5,11 +5,11 @@ function CategoryCard(props) {
   const [src, { blur }] = useProgressiveImg(props.compressedImg, props.image);
 
   return (
-    <div className="relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg">
+    <div className="relative overflow-hidden  rounded-lg bg-cover bg-no-repeat shadow-lg">
       <img
         src={src}
         loading="lazy"
-        className={`w-full h-28 md:h-52 ${
+        className={`w-full h-30 md:h-52 ${
           blur ? "blur" : "blur-none"
         }`}
       />

@@ -91,8 +91,8 @@ function SellerProductOperation() {
               handleSubmit();
             }}
           >
-            <div className="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 py-4 ">
-              <h5 className="text-xl font-medium leading-normal text-neutral-800 ">
+            <div className="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 py-4 bg-gray-900">
+              <h5 className="text-xl font-medium leading-normal text-white">
                 {operation.charAt(0).toUpperCase() + operation.slice(1)} Product
               </h5>
               <button
@@ -103,12 +103,12 @@ function SellerProductOperation() {
                 <span>{operation.toUpperCase()}</span>
               </button>
             </div>
-            <div className="relative py-6">
+            <div className="relative py-6 bg-gray-900">
               <div className="space-y-6">
                 <div className="grid grid-cols-6 gap-6">
                   <div className="col-span-6">
                     <div className="flex items-center justify-center w-full">
-                      <label className="flex flex-col relative items-center justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-10">
+                      <label className="flex flex-col relative items-center justify-center w-full border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-900 hover:bg-gray-10">
                         {formData.image ? (
                           <span>
                             <img
@@ -134,7 +134,7 @@ function SellerProductOperation() {
                         ) : (
                           <div className="flex flex-col items-center justify-center py-24">
                             <svg
-                              className="w-8 h-8 mb-4 text-gray-500"
+                              className="w-8 h-8 mb-4 text-white"
                               aria-hidden="true"
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -148,13 +148,13 @@ function SellerProductOperation() {
                                 d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                               />
                             </svg>
-                            <p className="mb-2 text-sm text-gray-500">
+                            <p className="mb-2 text-sm text-white">
                               <span className="font-semibold">
                                 Click to upload
                               </span>{" "}
                               or drag and drop
                             </p>
-                            <p className="text-xs text-gray-500">
+                            <p className="text-xs text-white">
                               SVG, PNG, JPG or JPEG
                             </p>
                           </div>
@@ -178,7 +178,7 @@ function SellerProductOperation() {
 
                   <div className="col-span-full">
                     <InputTag
-                      label={"Product Name"}
+                      label={<span className="text-white">Product Name</span>}
                       type={"text"}
                       placeholder={"Fresh Apples"}
                       setFormData={setFormData}
@@ -189,7 +189,7 @@ function SellerProductOperation() {
                   </div>
 
                   <div className="col-span-2 sm:col-span-2">
-                    <label className="text-sm font-medium text-gray-900 block mb-2">
+                    <label className="text-sm font-medium text-white block mb-2">
                       Category
                     </label>
                     <select
@@ -216,7 +216,7 @@ function SellerProductOperation() {
 
                   <div className="col-span-2 sm:col-span-2">
                     <InputTag
-                      label={"Measuring Unit"}
+                      label={<span className="text-white">Measuring Unit</span>}
                       type={"text"}
                       placeholder={"kg"}
                       setFormData={setFormData}
@@ -228,7 +228,7 @@ function SellerProductOperation() {
 
                   <div className="col-span-2 sm:col-span-2">
                     <InputTag
-                      label={"Price per unit"}
+                      label={<span className="text-white">Price Per Unit</span>}
                       type={"number"}
                       placeholder={"Rs.2000"}
                       setFormData={setFormData}
@@ -240,7 +240,7 @@ function SellerProductOperation() {
 
                   <div className="col-span-2 sm:col-span-2">
                     <InputTag
-                      label={"Minimum Order Quantity"}
+                      label={<span className="text-white">Minimum Order Quantity</span>}
                       type={"number"}
                       placeholder={"5 kg"}
                       setFormData={setFormData}
@@ -251,7 +251,7 @@ function SellerProductOperation() {
                   </div>
                   <div className="col-span-2 sm:col-span-2">
                     <InputTag
-                      label={"Stocks Left"}
+                      label={<span className="text-white">Stocks Left</span>}
                       type={"number"}
                       placeholder={"20 kg"}
                       setFormData={setFormData}
@@ -263,7 +263,7 @@ function SellerProductOperation() {
 
                   <div className="col-span-2 sm:col-span-2">
                     <InputTag
-                      label={"Shelf Life"}
+                      label={<span className="text-white">Shelf Life</span>}
                       type={"text"}
                       placeholder={"10 days"}
                       setFormData={setFormData}
@@ -276,7 +276,7 @@ function SellerProductOperation() {
                   <div className="col-span-full">
                     <label
                       htmlFor="product-details"
-                      className="text-sm font-medium text-gray-900 block mb-2"
+                      className="text-sm font-medium text-white block mb-2"
                     >
                       Description
                     </label>
@@ -300,7 +300,7 @@ function SellerProductOperation() {
             <div>
               <label
                 htmlFor="product-details"
-                className="text-sm font-medium text-gray-900 block mb-2"
+                className="text-sm font-medium text-white block mb-2 bg-gray-900"
               >
                 Choose Location
               </label>

@@ -68,8 +68,8 @@ function SellerProducts() {
           />
         </div>
         <Link to="product/add" className="w-full md:w-fit text-center">
-          <div className="text-md py-2 px-4 text-white rounded cursor-pointer bg-sky-700">
-            <i className="fa-regular fa-plus mr-2"></i>Add Product
+          <div className="text-md py-2 px-4 rounded cursor-pointer bg-sky-700">
+            <i className="fa-regular fa-plus mr-2 text-white"></i>Add Product
           </div>
         </Link>
       </div>

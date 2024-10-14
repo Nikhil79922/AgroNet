@@ -24,17 +24,17 @@ function Cart({ setOpenCart }) {
 
   return (
     <>
-      <div className="relative z-50">
+      <div className="relative z-50 bg-gray-900">
         <div className="fixed inset-0 bg-gray-700 bg-opacity-75 transition-opacity"></div>
 
         <div className="fixed inset-0 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
               <div className="pointer-events-auto w-screen md:max-w-md">
-                <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                <div className="flex h-full flex-col overflow-y-scroll bg-gray-900 shadow-xl">
                   <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                     <div className="flex items-start justify-between">
-                      <h2 className="text-lg font-medium text-gray-900">
+                      <h2 className="text-lg font-medium text-white">
                         Shopping Cart
                       </h2>
                       <div className="ml-3 flex h-7 items-center">
@@ -79,8 +79,8 @@ function Cart({ setOpenCart }) {
                   </div>
 
                   <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                    <div className="flex justify-between text-base font-medium text-gray-900">
-                      <p>Subtotal</p>
+                    <div className="flex justify-between text-base font-medium text-white">
+                      <p className="">Subtotal</p>
                       <p>Rs.{totalAmount}</p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500">

@@ -52,9 +52,9 @@ const NewSellerDashboard = () => {
   
 
   return (
-    <div className="w-full flex flex-row h-[calc(100vh-50px)]">
-      <div className="w-2/12 shadow-sm bg-gray-100 flex justify-between  py-4 px-2 flex-col">
-        <div className="flex flex-col gap-2">
+    <div  className="w-full bg-gray-900 flex flex-row h-[calc(100vh-50px)]">
+      <div  className="w-2/12  shadow-sm bg-gray-900 flex justify-between  py-4 px-2 flex-col">
+        <div  className="flex  flex-col gap-2">
           {links.map((link, index) => (
             <NavItem
             key={index}
@@ -65,7 +65,7 @@ const NewSellerDashboard = () => {
             />
           ))}
         </div>
-        <div className="border-t-2 border-gray-50">
+        <div  className="border-t-2  border-gray-50">
           <NavItem
             text="Logout"
             icon={<TbLogout2 />}
