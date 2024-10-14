@@ -2,7 +2,7 @@ import React from "react";
 
 const FormHeading = ({ type, isSignInForm }) => {
   return (
-    <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+    <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-white">
       {isSignInForm?"Sign In to":"Create"}{" "}
       <span
         className={`${type === "seller" ? "text-green-700" : "text-blue-600"}`}

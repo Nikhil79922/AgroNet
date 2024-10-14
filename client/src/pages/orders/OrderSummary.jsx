@@ -3,14 +3,14 @@ import React from "react";
 const OrderSummary = ({ totalAmount, deliveryCharge, limitForFreeDelivery }) => {
 
   return (
-    <div className="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-50  space-y-6">
-      <h3 className="text-xl  font-semibold leading-5 text-gray-800">
+    <div className="flex flex-col px-4 py-6 md:p-6 xl:p-8 w-full bg-gray-900  space-y-6">
+      <h3 className="text-xl  font-semibold leading-5 text-white">
         Summary
       </h3>
       <div className="flex justify-center items-center w-full space-y-4 flex-col border-gray-200 border-b pb-4">
         <div className="flex justify-between w-full">
-          <p className="text-base  leading-4 text-gray-800">Subtotal</p>
-          <p className="text-base  leading-4 text-gray-600">
+          <p className="text-base text-white leading-4 text-gray-800">Subtotal</p>
+          <p className="text-base text-white leading-4 text-gray-600">
             Rs.{totalAmount}.00
           </p>
         </div>
@@ -23,11 +23,11 @@ const OrderSummary = ({ totalAmount, deliveryCharge, limitForFreeDelivery }) => 
         </p>
       </div> */}
         <div className="flex justify-between items-center w-full">
-          <p className="text-base  leading-4 text-gray-800">Shipping</p>
+          <p className="text-base  leading-4 text-white">Shipping</p>
           {totalAmount >= limitForFreeDelivery ? (
-            <p className="text-base  leading-4 text-green-600">FREE</p>
+            <p className="text-base  leading-4 text-white">FREE</p>
           ) : (
-            <p className="text-base  leading-4 text-gray-600">
+            <p className="text-base  leading-4 text-white">
               Rs.{deliveryCharge}.00
             </p>
           )}
@@ -37,10 +37,10 @@ const OrderSummary = ({ totalAmount, deliveryCharge, limitForFreeDelivery }) => 
         </div>
       </div>
       <div className="flex justify-between items-center w-full">
-        <p className="text-base  font-semibold leading-4 text-gray-800">
+        <p className="text-base  font-semibold leading-4 text-white">
           Total
         </p>
-        <p className="text-base  font-semibold leading-4 text-gray-600">
+        <p className="text-base  font-semibold leading-4 text-white">
           Rs.
           {totalAmount +
             (totalAmount >= limitForFreeDelivery ? 0 : deliveryCharge)}

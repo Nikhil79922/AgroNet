@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 
 .logo {
@@ -39,4 +40,11 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.label-white{
+  color: white;
+}
+#root{
+  background-color: black;
 }
