@@ -4,6 +4,7 @@ import Spinner from "../../components/loading/Spinner";
 import useAI from "../../hooks/ai/useAI";
 import InputTag from "../../components/input/InputTag";
 
+
 const CropSenseAI = () => {
   const [prediction, setPrediction] = useState("");
   const { predictCrops, isLoading } = useAI();
@@ -26,7 +27,7 @@ const CropSenseAI = () => {
       <Heading text={"Crop Predictor"} textAlign="text-left" />
       <div className="container max-w-screen-lg mx-auto">
         <div>
-          <div className="bg-white px-4">
+          <div className="bg-gray-900 px-4">
             <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
               <div className="lg:col-span-full">
                 <form
@@ -37,7 +38,7 @@ const CropSenseAI = () => {
                   }}
                 >
                   <div className="md:col-span-6">
-                    <label htmlFor="soil">Soil</label>
+                    <label className="text-white" htmlFor="soil">Soil</label>
                     <select
                       name="crop"
                       required
@@ -58,20 +59,20 @@ const CropSenseAI = () => {
                     </select>
                   </div>
 
-                  <div className="md:col-span-6">
-                    <InputTag
-                      label={"Altitude (in km)"}
-                      type={"number"}
-                      placeholder={"Between 0 and 10 (kilometers)"}
-                      value={formData.altitude}
-                      setFormData={setFormData}
-                      toUpdate={"altitude"}
-                    />
-                  </div>
+                  <div className="text-white md:col-span-6">
+                  <InputTag
+                    label={<span className="text-white">Altitude (in km)</span>}
+                    type={"number"}
+                    placeholder={"Between 0 and 10 (kilometers)"}
+                    value={formData.altitude}
+                    setFormData={setFormData}
+                    toUpdate={"altitude"}
+                  />
+                </div>
 
                   <div className="md:col-span-2">
                     <InputTag
-                      label={"Temperature (in °C)"}
+                      label={<span className="text-white">Temperature (in °C)</span>}
                       type={"number"}
                       placeholder={"Between -50 and 50 (°Celsius)"}
                       value={formData.temperature}
@@ -81,7 +82,7 @@ const CropSenseAI = () => {
                   </div>
                   <div className="md:col-span-2">
                     <InputTag
-                      label={"Humidity (in %)"}
+                      label={<span className="text-white">Humidity (in %)</span>}
                       type={"number"}
                       placeholder={"Between 0 and 100 (%)"}
                       value={formData.humidity}
@@ -91,7 +92,7 @@ const CropSenseAI = () => {
                   </div>
                   <div className="md:col-span-2">
                     <InputTag
-                      label={"Rainfall (in mm)"}
+                      label={<span className="text-white">Rainfall (in mm)</span>}
                       type={"number"}
                       placeholder={"Between 0 and 1000 (mm)"}
                       value={formData.rainfall}

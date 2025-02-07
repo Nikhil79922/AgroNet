@@ -43,11 +43,11 @@ function SellerContact() {
               />
             </div>
 
-            <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full">
-              <h2 className="text-green-600 text-lg mb-1 font-medium title-font">
+            <div className="lg:w-1/3 md:w-1/2 bg-gray-300 flex flex-col md:ml-auto w-full">
+              <h2 className="text-green-600 underline text-lg mb-1 font-medium title-font">
                 Contact Farmer
               </h2>
-              <p className="leading-relaxed mb-5 text-gray-600 text-sm md:text-base">
+              <p className="leading-relaxed mb-5 text-black text-sm md:text-base">
                 Many farmers are more than happy to discuss their farming
                 practices and answer any queries you may have about their
                 products.
@@ -61,13 +61,13 @@ function SellerContact() {
                 <div className="relative mb-4">
                   <label
                     htmlFor="message"
-                    className="leading-7 text-sm text-gray-600"
+                    className="leading-7 text-sm text-black"
                   >
                     Message
                   </label>
                   <textarea
                     name="message"
-                    className="w-full bg-white rounded border border-gray-300 focus:border-green-600 focus:ring-2 focus:ring-green-50 h-40 md:h-64 text-base outline-none text-gray-700 py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-green-600 focus:ring-2 focus:ring-green-50 h-40 md:h-64 text-base outline-none text-black py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                     value={feedbackForm.question}
                     placeholder="Type your message here..."
                     required

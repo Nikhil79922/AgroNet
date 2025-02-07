@@ -48,7 +48,7 @@ const categoryProductData = [
 
 function Category() {
   return (
-    <div className="grid gap-2 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-gray-900 p-4 text-gray-100">
+    <div className="grid gap-2 md:gap-4 lg:gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-gray-900 p-4 text-gray-100 min-h-screen">  {/* Increased min-height */}
       {categoryProductData.map((item, index) => (
         <Link to={`/category/${item.title.toLowerCase()}`} key={index}>
           <CategoryCard

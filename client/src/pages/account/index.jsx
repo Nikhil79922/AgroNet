@@ -35,8 +35,8 @@ function LoginAndSignup() {
     if (isSignInForm) {
       setFormData((prevData) => ({
         ...prevData,
-        email: "nikhil53056@gmail.com",
-        password: "12345678",
+        email: "ns94301918@gmail.com",
+        password: "gasmonkey",
       }));
     } else {
       setFormData((prevData) => ({ ...prevData, email: "", password: "" }));
@@ -44,9 +44,9 @@ function LoginAndSignup() {
   }, [isSignInForm]);
 
   return (
-    <section className="flex flex-col-reverse md:flex-row  md:h-screen">
+    <section className="flex flex-col-reverse md:flex-row bg-gray-900 md:h-screen">
       <SideImage type={type} />
-      <div className="flex flex-col w-full lg:w-1/2 items-center justify-center px-6 py-8 lg:py-0">
+      <div className="flex flex-col w-full lg:w-1/2 items-center justify-center px-6 py-8  lg:py-0">
         <div className="lg:p-6 space-y-4 md:space-y-6 sm:p-8 w-full">
           <FormHeading type={type} isSignInForm={isSignInForm} />
           <form
@@ -62,7 +62,7 @@ function LoginAndSignup() {
               <>
                 {/* Common for both seller and user */}
                 <InputTag
-                  label={"Name"}
+                  label={<span className="text-white">Name</span>}
                   placeholder={"Nikhil"}
                   type={"text"}
                   outlineColor={
@@ -73,7 +73,7 @@ function LoginAndSignup() {
                   toUpdate={"name"}
                 />
                 <InputTag
-                  label={"Contact No."}
+                  label={<span className="text-white">Contact No.</span>}
                   placeholder={"79922XXXXX"}
                   type={"text"}
                   outlineColor={
@@ -87,7 +87,7 @@ function LoginAndSignup() {
                 {/* For Seller Specific */}
                 {type === "seller" && (
                   <InputTag
-                    label={"Brand Name"}
+                    label={<span className="text-white">Brand Name</span>}
                     placeholder={"NikhilVeggies"}
                     type={"text"}
                     outlineColor={
@@ -105,7 +105,7 @@ function LoginAndSignup() {
 
             {/* For Sign In */}
             <InputTag
-              label={"Email"}
+              label={<span className="text-white">Email</span>}
               placeholder={"Nikhil@gmail.com"}
               type={"email"}
               outlineColor={
@@ -116,7 +116,7 @@ function LoginAndSignup() {
               toUpdate={"email"}
             />
             <InputTag
-              label={"Password"}
+              label={<span className="text-white">Password</span>}
               placeholder={"••••••••"}
               type={"password"}
               outlineColor={
@@ -143,8 +143,8 @@ function LoginAndSignup() {
               <div className="text-xs font-medium text-rose-600">
                 *In case you don't want to create an account, you can use the
                 following credentials to login: <br />
-                Email: nikhil53056@gmail.com <br />
-                Password: 12345678
+                Email: ns94301918@gmail.com <br />
+                Password: gasmonkey
               </div>
             ) : (
               <div className="text-xs font-medium text-rose-600">

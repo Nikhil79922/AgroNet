@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -121,7 +122,7 @@ function ProductDetails() {
             />
           )}
 
-          <p className="leading-relaxed text-sm md:text-base">
+          <p className="leading-relaxed text-sm md:text-base text-gray-400">
             {isLoading ? (
               <TextSkeleton noOfRows={12} />
             ) : (
@@ -132,11 +133,11 @@ function ProductDetails() {
           <div className="relative overflow-x-auto my-6">
             <table className="w-full text-base text-left text-gray-500">
               <tbody>
-                <tr className="bg-white border-b">
+                <tr className="bg-gray-200 border-b">
                   <th className="px-2 md:px-6 py-2 md:py-4 font-medium text-gray-900 whitespace-nowrap">
                     Stocks Left
                   </th>
-                  <td className="px-2 md:px-6 py-2 md:py-4 ">
+                  <td className="px-2 md:px-6 py-2 md:py-4 text-black ">
                     {isLoading ? (
                       <TextSkeleton noOfRows={1} />
                     ) : (
@@ -144,11 +145,11 @@ function ProductDetails() {
                     )}
                   </td>
                 </tr>
-                <tr className="bg-white border-b">
+                <tr className="bg-gray-200 border-b">
                   <th className="px-2 md:px-6 py-2 md:py-4 font-medium text-gray-900 whitespace-nowrap">
                     Shelf Life
                   </th>
-                  <td className="px-2 md:px-6 py-2 md:py-4 ">
+                  <td className="px-2 md:px-6 py-2 md:py-4 text-black">
                     {isLoading ? (
                       <TextSkeleton noOfRows={1} />
                     ) : (
@@ -161,7 +162,7 @@ function ProductDetails() {
           </div>
 
           <div className="flex justify-between flex-col md:flex-row">
-            <div className="space-y-1">
+            <div className="space-y-1 text-gray-300">
               {isMainDataLoading ? (
                 <TextSkeleton noOfRows={1} />
               ) : (

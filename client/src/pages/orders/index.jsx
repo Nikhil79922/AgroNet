@@ -29,7 +29,7 @@ function Order() {
 
   return (
     <>
-      <div className="py-14 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
+      <div className="py-14 px-4 md:px-6 2xl:px-20 2xl:container bg-gray-900 2xl:mx-auto">
         <div className="flex justify-start item-start space-y-1 md:space-y-2 flex-col">
           <Heading
             text="Your Order"
@@ -37,14 +37,14 @@ function Order() {
             marginY="my-0"
             paddingX="px-0"
           />
-          <p className="text-sm md:text-base  font-medium leading-6 text-gray-600">
+          <p className="text-sm md:text-base  font-medium leading-6 text-gray-400">
             {getCurrentDateTime()}
           </p>
         </div>
         <div className="mt-6 md:mt-10 flex flex-col xl:flex-row jusitfy-center items-stretch w-full xl:space-x-8 space-y-4 md:space-y-6 xl:space-y-0">
           <div className="flex flex-col justify-start items-start w-full space-y-4 md:space-y-6 xl:space-y-8">
-            <div className="flex flex-col justify-start items-start  bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
-              <p className="text-lg md:text-xl  font-semibold leading-6 xl:leading-5 text-gray-800">
+            <div className="flex flex-col justify-start bg-gray-900 items-start  bg-gray-50 px-4 py-4 md:py-6 md:p-6 xl:p-8 w-full">
+              <p className="text-lg md:text-xl text-white font-semibold leading-6 xl:leading-5 text-gray-800">
                 Your Cart
               </p>
 

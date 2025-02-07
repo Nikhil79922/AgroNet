@@ -4,7 +4,7 @@ const NavItem = ({ text, icon, isSelected = false, onClick }) => {
   return (
     <div
       className={`w-full flex flex-row items-center gap-2 py-2 text-base justify-center md:justify-start ${
-        isSelected ? "bg-rose-700 text-slate-100 shadow-md" : "text-gray-700 hover:bg-gray-200 "
+        isSelected ? "bg-rose-700 text-slate-100 shadow-md" : "text-white hover:bg-gray-200 hover:text-black"
       }  px-4 font-medium rounded-md cursor-pointer transition duration-100 ease-in-out`}
       onClick={onClick}
     >

@@ -51,7 +51,7 @@ function CartCard({item}) {
             }}>
               <AiOutlineMinus />
             </button>
-            <span className="focus:outline-none border-t-2 border-b-2 border-gray-100 px-4 text-center font-semibold text-md flex items-center text-gray-700 outline-none">
+            <span className="focus:outline-none border-t-2 border-b-2 border-gray-100 px-4 text-center font-semibold text-md flex items-center text-gray-200 outline-none">
               {item.qty} {item.unit}
             </span>
             <button className="flex justify-center items-center bg-gray-100 text-gray-600 hover:text-gray-700 hover:bg-gray-200 h-full px-3 rounded-r cursor-pointer outline-none" onClick={(e)=>{
