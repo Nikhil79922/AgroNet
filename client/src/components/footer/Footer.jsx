@@ -9,9 +9,9 @@ import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-red-950 via-gray-900 to-black text-white h-16 px-2 md:px-1 text-center flex flex-row items-center justify-between"> {/* Dark red to black gradient */}
-      <p className="font-semibold text-3xl md:text-base">Made by Nikhil</p>
+      <p className="font-semibold text-3xl md:text-base">Made by Ayush</p>
       <div className="flex flex-row text-lg md:text-2xl gap-3 md:gap-5">
-        <a href={"https://github.com/Nikhil79922"} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
+        <a href={"https://github.com/Ayush110403"} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
           <FaGithub />
         </a>
         <a href={"https://www.linkedin.com/in/ayush110403/"} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
@@ -20,7 +20,7 @@ const Footer = () => {
         <a href={"https://x.com/PrimeX077?t=wrp3AOyURYLGk3XlcnOwHQ&s=09"} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
           <FaXTwitter />
         </a>
-        <a href={"https://www.instagram.com/singh09singh/"} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
+        <a href={"https://www.instagram.com/_ayush1104_/"} target="_blank" rel="noopener noreferrer" className="hover:text-red-300">
           <FaInstagram />     
         </a>
       </div>
